@@ -1,0 +1,27 @@
+{
+  "name": "qubrew",
+  "version": "0.0.1",
+  "description": "Leverage spacebrew-midi to attach a QuNeo to Spacebrew",
+  "main": "qubrew.js",
+  "dependencies": {
+    "spacebrew-midi": "~0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node qubrew.js",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/randallagordon/qubrew"
+  },
+  "keywords": [
+    "QuNeo",
+    "Spacebrew"
+  ],
+  "author": "Randall A. Gordon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/randallagordon/qubrew/issues"
+  }
+}
