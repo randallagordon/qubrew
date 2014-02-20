@@ -1,6 +1,6 @@
 {
   "name": "qubrew",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Leverage spacebrew-midi to attach a QuNeo to Spacebrew",
   "main": "qubrew.js",
   "dependencies": {
