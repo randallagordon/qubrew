@@ -3,13 +3,15 @@
 var sbmidi = require("spacebrew-midi"),
 	inPorts, outPorts
 
-sbmidi.connect({ name: "QuNeo" })
+function isQuNeo(portName) { return portName.indexOf("QUNEO") === -1 ? false : true; }
+
+sbmidi.connect({ name: "QuNeo", description: "QuNeo, via Spacebrew! Code on GitHub: github.com/randallagordon/qubrew and github.com/randallagordon/spacebrew-midi" })
 
 inPorts  = sbmidi.getInPorts()
 outPorts = sbmidi.getOutPorts()
 
-sbmidi.openInPort(inPorts.indexOf("QUNEO"))
-sbmidi.openOutPort(outPorts.indexOf("QUNEO"))
+sbmidi.openInPort(inPorts.map(isQuNeo).indexOf(true))
+sbmidi.openOutPort(outPorts.map(isQuNeo).indexOf(true))
 
 // Ranges for first QuNeo mode
 sbmidi.addInputRange(0x24, 0x33)
